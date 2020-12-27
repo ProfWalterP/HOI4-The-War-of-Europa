@@ -1,0 +1,101 @@
+ideologies = {
+	
+	                anarchist = {#政治思想种类如法西斯 共产主义 民主等
+	
+		types = {
+			anarcho_syndicalism = {  		# 在为领导人分配意识形态时使用. 例如,民主有保守主义，自由主义和社会主义,可以定义一个值（yes/no）
+			can_be_randomly_selected = # ＃如果为否，则在创建新的随机领导者时将不会随机选择子意识形态
+			}
+		}
+		
+		dynamic_faction_names = {
+			"FACTION_NAME_ANARCHIST_1" ＃当具有此意识形态的ai时，ai使用的阵营名称创建派系
+		}
+		
+		color = { 169 42 42 } # RGB意识形态颜色。在政治饼图中或图表旁边时显示的颜色
+		
+		rules = { # 意识形态规则（yes/否）
+                        		can_create_collaboration_government = # 可以建立合作政府Required
+			can_declare_war_on_same_ideology = # 宣告对同一意识形态的战争 Not required
+			can_force_government = # 可以改变和平协议中的意识形态. Required
+			can_send_volunteers = # Can send volunteers. Required
+			can_puppet = # 可以傀儡和平协议中的国家. Required
+			can_lower_tension = # 降低和平协议时的紧张气氛. Not required
+			can_only_justify_war_on_threat_country = # 只能为产生世界紧张/威胁的国家辩护. Not required
+			can_guarantee_other_ideologies = # 可以保证独立具有不同意识形态的国家. Not required
+		}
+
+                can_host_government_in_exile = no #可以在流亡政府中任职
+		
+		war_impact_on_world_tension = # Goes from -1 to 1. Increases or decreases the world tension created by this nation
+		faction_impact_on_world_tension = # Goes from -1 to 1. Increases or decreases a faction of this ideologies impact on tension
+		
+		modifiers = { # More rules for the ideology
+			generate_wargoal_tension = # Required world tension to start justifying a war (0 to 1)
+			join_faction_tension = # Required world tension to join a faction (0 to 1)
+			lend_lease_tension = # Required tension to start a lend-lease (0 to 1)
+			send_volunteers_tension = # Required tension to send volunteers (0 to 1)
+			guarantee_tension = # Required tension to guarantee a nation (0 to 1)
+			take_states_cost_factor = # Changes the cost of states in a peace deal. 0.25 would increase state cost by 25% (-1 to 1)
+			annex_cost_factor = # Changes the cost of entirely annexing a nation in a peace deal. 0.5 would increase annexing cost by 50% (-1 to 1)
+			justify_war_goal_when_in_major_war_time = # Changes the cost of justifying a war while in a major war. 0.5 would decrease time by 50% (0 to 1)
+			drift_defence_factor = # Natural drift defence for the ideology # 0.3 would grant 30% drift defence (-1 to 1)
+			puppet_cost_factor = # Changes the cost of puppeting a nation in a peace deal (-1 to 1)
+		}
+
+		can_be_boosted = # 您能提高这种意识形态在另一个国家的受欢迎程度 (yes/no)
+		can_collaborate = #能与他国合作
+		
+		faction_modifiers = {
+			faction_trade_opinion_factor = 0.50 #plus 50% trade opinion
+		}
+		ai_<ideology> = yes # Determines what ai this ideology will use (democratic, communism, fascism, neutral or make a new one.)
+	}
+
+
+
+#科学先锋主义
+ideologies = {
+	
+	                scientific = {
+	
+		types = {
+			scientific_vanguard = {  		# 在为领导人分配意识形态时使用. 例如,民主有保守主义，自由主义和社会主义,可以定义一个值（yes/no）
+			}
+			
+			}
+		}
+		
+		dynamic_faction_names = {
+			"FACTION_NAME_ANARCHIST_1" ＃当具有此意识形态的ai时，ai使用的阵营名称创建派系
+		}
+		
+		color = { 230 50 55 } # RGB意识形态颜色。在政治饼图中或图表旁边时显示的颜色
+		
+		rules = { # 意识形态规则（yes/否）
+                        		can_create_collaboration_government = yes # 可以建立合作政府Required
+			can_declare_war_on_same_ideology = yes# 宣告对同一意识形态的战争 Not required
+			can_force_government = yes# 可以改变和平协议中的意识形态. Required
+			can_send_volunteers = # Can send volunteers. Required
+			can_puppet = no# 可以傀儡和平协议中的国家. Required
+			can_lower_tension = yes# 降低和平协议时的紧张气氛. Not required
+			can_only_justify_war_on_threat_country = no# 只能为产生世界紧张/威胁的国家辩护. Not required
+			can_guarantee_other_ideologies = no# 可以保证独立具有不同意识形态的国家. Not required
+		}
+
+                can_host_government_in_exile = no #可以在流亡政府中任职
+		
+		war_impact_on_world_tension = 0.5 # Goes from -1 to 1. Increases or decreases the world tension created by this nation
+		faction_impact_on_world_tension = 0.5# Goes from -1 to 1. Increases or decreases a faction of this ideologies impact on tension
+		
+		
+
+		can_be_boosted = no# 您能提高这种意识形态在另一个国家的受欢迎程度 (yes/no)
+		can_collaborate = yes#能与他国合作
+		
+		faction_modifiers = {
+			faction_trade_opinion_factor = 0.50 #plus 50% trade opinion
+		}
+		ai_<ideology> = yes # Determines what ai this ideology will use (democratic, communism, fascism, neutral or make a new one.)
+	}
+}
